@@ -12,4 +12,7 @@ cfcEntityStubber.registerStub( function()
         [HITGROUP_LEFTLEG] = 0.1,
         [HITGROUP_RIGHTLEG] = 0.1
     }
+    weapon.CFCHitGroupDamageValues = {
+        [HITGROUP_LEFTLEG] = 69 -- always do 69 damage to the left leg
+    }
 end )
