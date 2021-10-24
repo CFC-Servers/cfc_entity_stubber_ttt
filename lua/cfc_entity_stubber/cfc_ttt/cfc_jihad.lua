@@ -1,0 +1,15 @@
+AddCSLuaFile()
+cfcEntityStubber.registerStub( function()
+    local weapon = cfcEntityStubber.getWeapon( "weapon_ttt_jihad" )
+    weapon.Asplode = function(self)
+        local ent = ents.Create( "env_explosion" )
+
+        ent:SetPos( self.Owner:GetPos() )
+        ent:SetOwner( self.Owner )
+        ent:Spawn()
+        ent:SetKeyValue( "iMagnitude", "230" )
+        ent:Fire( "Explode", 0, 0 )
+        ent:EmitSound( "ttt_jihad_explosion", 500, 500 )
+        self:Remove()
+    end
+end )
