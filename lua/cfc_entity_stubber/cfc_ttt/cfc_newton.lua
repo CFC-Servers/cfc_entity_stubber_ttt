@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 cfcEntityStubber.registerStub( function()
-    local SWEP = weapons.GetStored( "weapon_ttt_sipistol" )
+    local SWEP = cfcEntityStubber.getWeapon( "weapon_ttt_push" )
     local BaseClass = baseclass.Get( "weapon_tttbase" )
 
     local CHARGE_AMOUNT = 0.1
