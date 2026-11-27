@@ -2,7 +2,7 @@
 
 Entity Stubber definitions for the TTT server.
 
-Requires the [cfc_entity_stubber](https://github.com/CFC-Servers/cfc_entity_stubber) version supporting filename-based weapon stubs through PreRegisterSWEP.
+Requires the [cfc_entity_stubber](https://github.com/CFC-Servers/cfc_entity_stubber) version supporting filename-based weapon and entity stubs through PreRegisterSWEP and PreRegisterSENT.
 
 Weapon patches live in `lua/cfc_entity_stubber/weapons/ttt/`. Each filename is the exact weapon class and each file returns a function receiving the weapon table being registered. The framework distributes and loads these files on both server and client; no per-file AddCSLuaFile or stubber registration is needed.
 
