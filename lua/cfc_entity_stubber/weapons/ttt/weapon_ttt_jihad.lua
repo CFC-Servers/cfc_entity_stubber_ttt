@@ -1,6 +1,4 @@
-AddCSLuaFile()
-cfcEntityStubber.registerStub( function()
-    local weapon = cfcEntityStubber.getWeapon( "weapon_ttt_jihad" )
+return function( weapon )
     function weapon:Asplode()
         local ent = ents.Create( "env_explosion" )
 
@@ -13,4 +11,4 @@ cfcEntityStubber.registerStub( function()
         ent:EmitSound( "ttt_jihad_explosion", 500, 500 )
         self:Remove()
     end
-end )
+end

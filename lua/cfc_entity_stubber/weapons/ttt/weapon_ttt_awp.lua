@@ -1,6 +1,4 @@
-AddCSLuaFile()
-cfcEntityStubber.registerStub( function()
-    local weapon = cfcEntityStubber.getWeapon( "weapon_ttt_awp" )
+return function( weapon )
     weapon.CFCDamageMultipliers = {
         [HITGROUP_HEAD] = 2,
         [HITGROUP_CHEST] = 2,
@@ -8,4 +6,4 @@ cfcEntityStubber.registerStub( function()
         [HITGROUP_LEFTARM] = 2,
         [HITGROUP_RIGHTARM] = 2
     }
-end )
+end
