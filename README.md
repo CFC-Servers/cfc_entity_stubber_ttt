@@ -1,5 +1,5 @@
 # cfc_entity_stubber_ttt
 
-Entity Stubber definitions for the TTT server
+Entity Stubber definitions for the TTT server.
 
-Uses and requires: https://github.com/CFC-Servers/cfc_entity_stubber
+Requires the [cfc_entity_stubber](https://github.com/CFC-Servers/cfc_entity_stubber). See entity stubber for documentation on how to add stubs.

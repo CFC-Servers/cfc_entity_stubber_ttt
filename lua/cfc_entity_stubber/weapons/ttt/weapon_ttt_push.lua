@@ -1,14 +1,10 @@
-AddCSLuaFile()
-
-cfcEntityStubber.registerStub( function()
-    local SWEP = cfcEntityStubber.getWeapon( "weapon_ttt_push" )
-    local BaseClass = baseclass.Get( "weapon_tttbase" )
+return function( SWEP )
 
     local CHARGE_AMOUNT = 0.1
     local CHARGE_DELAY = 0.025
 
-    weapon_ttt_push_originalThink = weapon_ttt_push_originalThink or SWEP.Think
     function SWEP:Think()
+        local BaseClass = baseclass.Get( "weapon_tttbase" )
         BaseClass.Think( self )
         if self.IsCharging and IsValid( self:GetOwner() ) and self:GetOwner():IsTerror() then
             -- on client this is prediction
@@ -54,4 +50,4 @@ cfcEntityStubber.registerStub( function()
 
         self:FirePulse( force_fwd, force_up )
     end
-end )
+end
